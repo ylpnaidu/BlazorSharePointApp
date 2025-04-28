@@ -1,0 +1,93 @@
+﻿@using Microsoft.AspNetCore.Components.WebAssembly.Authentication
+@using System.Text.Json
+
+@page "/Contentscheduler"
+@inject IAccessTokenProvider TokenProvider
+@inject NavigationManager Navigation
+
+
+@code {
+    private SharePointListResponse items = new();
+    private string? error;
+
+    protected override async Task OnInitializedAsync()
+    {
+        try
+        {
+
+            var result = await TokenProvider.RequestAccessToken();
+
+            if (result.TryGetToken(out var token))
+            {
+
+                var http = new HttpClient();
+                http.DefaultRequestHeaders.Authorization =
+                    new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", token.Value);
+                http.DefaultRequestHeaders.Accept.Clear();
+                http.DefaultRequestHeaders.Accept.Add(
+                    new System.Net.Http.Headers.MediaTypeWithQualityHeaderValue("application/json"));
+                var sharePointApiUrl = "https://epam.sharepoint.com/sites/EPAMTestSiteMiNOS/_api/web/lists/getbytitle('Content scheduler')/items";
+                var response = await http.GetAsync(sharePointApiUrl);
+
+                response.EnsureSuccessStatusCode();
+
+                var json = await response.Content.ReadAsStringAsync();
+
+                if (json != null)
+                {
+                    items = JsonSerializer.Deserialize<SharePointListResponse>(json);
+                }
+
+                // items = doc.RootElement
+                //     .GetProperty("value")
+                //     .EnumerateArray()
+                //     .Select(item => new Value
+                //         {
+                //             ContentTitle = item.GetProperty("Content title").GetInt32(),
+                //             Description = item.GetProperty("Description").GetString()
+                //         }).ToList();
+
+            }
+            else
+            {
+                Navigation.NavigateTo(result.RedirectUrl);
+            }
+        }
+        catch(Exception e)
+        {
+            
+        }
+    }
+    
+}
+
+<h3>Content Scheduler Items</h3>
+
+@if (!string.IsNullOrEmpty(error))
+{
+    <p style="color:red">@error</p>
+}
+else if (items.Value == null || items.Value.Count == 0)
+{
+    <p><em>Loading or no items found...</em></p>
+}
+else
+{
+    <table class="table">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Title</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in items.Value)
+            {
+                <tr>
+                    <td>@item.Title</td>
+                    <td>@item.Description</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}

@@ -1,0 +1,65 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\bin\\Release\\net8.0\\wwwroot\\_framework\\blazor.webassembly.js",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\obj\\Release\\net8.0\\compressed\\kfbvrxmem3.gz",
+      "PackagePath": "staticwebassets\\_framework\\blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\obj\\Release\\net8.0\\scopedcss\\bundle\\BlazorSharePointApp.styles.css",
+      "PackagePath": "staticwebassets\\BlazorSharePointApp.styles.css"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\appsettings.json",
+      "PackagePath": "staticwebassets\\appsettings.json"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\css\\app.css",
+      "PackagePath": "staticwebassets\\css\\app.css"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\css\\bootstrap\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\css\\bootstrap\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\favicon.png",
+      "PackagePath": "staticwebassets\\favicon.png"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\icon-192.png",
+      "PackagePath": "staticwebassets\\icon-192.png"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\SharepointSite\\BlazorSharePointApp\\BlazorSharePointApp\\wwwroot\\sample-data\\weather.json",
+      "PackagePath": "staticwebassets\\sample-data\\weather.json"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.BlazorSharePointApp.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.build.BlazorSharePointApp.props",
+      "PackagePath": "build\\BlazorSharePointApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.BlazorSharePointApp.props",
+      "PackagePath": "buildMultiTargeting\\BlazorSharePointApp.props"
+    },
+    {
+      "Id": "obj\\Release\\net8.0\\staticwebassets\\msbuild.buildTransitive.BlazorSharePointApp.props",
+      "PackagePath": "buildTransitive\\BlazorSharePointApp.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

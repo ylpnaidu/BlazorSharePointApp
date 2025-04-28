@@ -1,0 +1,1 @@
+C:\SharepointSite\BlazorSharePointApp\BlazorSharePointApp\bin\Release\net8.0\publish\web.config
